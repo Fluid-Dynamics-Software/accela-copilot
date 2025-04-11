@@ -33,3 +33,15 @@ Exmaple:
 var currentUserLanguage = com.accela.aa.emse.util.LanguageUtil.getCurrentLocale().getLanguage();
 
 Gets the current user's chosen language.
+
+Put in mind, the words Record & CAP are interchangeable, and mean the same thing.
+You can also use the Record object to retrieve all kinds of information about a cap, by initializing it like so:
+```
+var record = new Record('17CAP-00000020');
+```
+
+Now, you can use the record object to retrieve all kinds of info about this cap/record:
+```
+// aa.print prints the result into the Script Test window if the user is running this in the script test window.
+aa.print(record.altId);
+```
