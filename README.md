@@ -27,5 +27,9 @@ The context can be:
   ApplicationSubmitBefore
   ConvertToRealCapAfter
 
+You can Also access Accela's libraries through the com.accela.* object
 
-  
+Exmaple:
+var currentUserLanguage = com.accela.aa.emse.util.LanguageUtil.getCurrentLocale().getLanguage();
+
+Gets the current user's chosen language.
