@@ -45,3 +45,18 @@ Now, you can use the record object to retrieve all kinds of info about this cap/
 // aa.print prints the result into the Script Test window if the user is running this in the script test window.
 aa.print(record.altId);
 ```
+
+Translations:
+
+```
+// This code retrieves the translated value based on the current logged in user's language, using the key "ACLA_ADD_TENANTS"
+var errorMessage = aa.messageResources.getLocalMessage("ACLA_ADD_TENANTS")
+	
+```
+
+In all Before events, the user can cancel the execution and stop the page/flow from moving forward, like so
+```
+	var errorMessage = aa.messageResources.getLocalMessage("ACLA_ADD_TENANTS")
+	aa.env.setValue("ErrorCode", "-2");
+	aa.env.setValue("ErrorMessage", errorMessage);
+```
